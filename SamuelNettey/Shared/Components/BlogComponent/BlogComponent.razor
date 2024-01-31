@@ -1,0 +1,65 @@
+﻿<div>
+    <h4 class="title">
+        @Title
+    </h4>
+    <!--Content After the blog title-->
+    <div class="block-info">
+        <span>
+            <!--for date-->
+            <img />
+            <p>@Date</p>
+        </span>
+
+        <span>
+            <!--for comments-->
+            <img />
+            <p>@Comments Comments</p>
+        </span>
+
+        <span>
+            <!--for type-->
+            <img />
+            <p>@Date</p>
+        </span>
+
+        <span>
+            <!--for date-->
+            <img />
+            <p>Posted by <span>@Author</span></p>
+        </span>
+    </div>
+    <!--blog image-->
+    <div style="background-image: @Img;" class="img">
+    </div>
+
+    <!--blog description-->
+    <div>
+        <p>@Description</p>
+    </div>
+
+    <!--Continue Reading-->
+    <div>continue reading ...</div>
+
+    <!--Technologies Used-->
+    <div>
+        @foreach (string tech in Technologies)
+        {
+            <span class="technology">@tech</span>
+        }
+    </div>
+</div>
+
+
+<!--How to use this component-->
+<!--
+    use the name of this file as a tag (without any extention and pass the properties with the parameter flag as attributes in it with the corresponding values)
+    EXAMPLE
+<BlogComponent
+    Title="Sample Blog Title"
+    Description="This is a sample blog description."
+    Author="John Doe"
+    Img="sample.jpg"
+    Date="January 30, 2024"
+    Comments="5"
+    Technologies="@(new string[] { "Blazor", "C#", "ASP.NET Core" })"
+/>-->
